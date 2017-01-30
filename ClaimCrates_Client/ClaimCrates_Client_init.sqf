@@ -22,5 +22,5 @@ private ['_code', '_function', '_file'];
 }
 forEach
 [
-    ['ExileClient_ClaimVehicles_network_claimRequestSend','ClaimVehicles_Client\functions\ExileClient_ClaimVehicles_network_claimRequestSend.sqf']
+    ['ExileClient_ClaimCrates_network_claimRequestSend','ClaimCrates_Client\functions\ExileClient_ClaimCrates_network_claimRequestSend.sqf']
 ];
