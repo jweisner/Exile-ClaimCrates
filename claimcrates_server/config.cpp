@@ -35,7 +35,7 @@ class CfgFunctions
 };
 class CfgNetworkMessages
 {
-	class saveVehicleRequest
+	class claimCrateRequest
 	{
 		module="ClaimCrates";
 		parameters[]=
