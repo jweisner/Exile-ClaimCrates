@@ -5,6 +5,7 @@
 This Exile server mod allows players to bulk-sell loot crates from DMS/Occupation missions.
 
 The code is adapted from [Exile-ClaimVehicles](https://github.com/MezoPlays/Claim-Vehicles) by MezzoPlays/gianni001
+The method used combines the idea of [TheSmoothOperator's R3F-WasteDumpOverride](https://github.com/TheSmoothOperator/R3F-WasteDumpOverride) with [this post](http://www.exilemod.com/topic/17848-release-r3f-waste-dump-override/?do=findComment&comment=147705) and makes it work. I don't use R3F on my server, so I needed another method. None of this code is "mine", I just mashed it together.
 
 ## Installation
 * Make ```claimcrates_server.pbo``` using PBO Manager on the ```claimcrates_server``` folder
@@ -68,6 +69,23 @@ Example interaction code for an ```Exile_Container_SupplyBox```:
 ## Dependencies
 * [Exile](http://www.exilemod.com/downloads/)
 * [Defent's Mission System](https://github.com/Defent/DMS_Exile)
+
+## Tested with these Exile mods
+* Linux ArmA server
+* customized Exile
+* DMS
+* Occupation
+* InfiSTAR
+* ExAd
+* Advanced Towing
+* Advanced Sling Loading
+* Advanced Rappelling
+* Advanced Urban Rappelling
+* Extended Base Mod
+* Enigma's Revive
+* Claim Vehicles
+
+Check it out on the ```[TLZ] Altis``` public Exile server!
 
 ## Tools
 * [PBO Manager](http://www.armaholic.com/page.php?id=16369)
