@@ -11,20 +11,8 @@
  
 private["_nearVehicles","_localVehicles","_display","_revenue","_sellButton","_dropdown","_vehicleObject","_vehicleName","_index"];
 disableSerialization;
-_nearVehicles = nearestObjects [player, ["LandVehicle", "Air", "Ship"], 150];
-_localVehicles = [];
-{
-	if (local _x) then
-	{
-		if (alive _x) then
-		{
-			_localVehicles pushBack _x;
-		};
-	};
-}
-forEach _nearVehicles;
-
-_nearCrates = nearestObjects [player, [
+_nearVehicles = nearestObjects [player, [
+	"LandVehicle", "Air", "Ship",
 	"Box_NATO_WpsSpecial_F","Box_NATO_Ammo_F","Box_NATO_Uniforms_F","Box_East_Wps_F",
 	"Exile_Container_Storagecrate","Exile_Container_SupplyBox","Box_IND_Support_F","Box_East_Support_F",
 	"Land_CargoBox_V1_F","Box_IND_Wps_F","Box_FIA_Ammo_F","CargoNet_01_box_F","Box_Syndicate_Wps_F",
@@ -37,14 +25,19 @@ _nearCrates = nearestObjects [player, [
 	"Box_NATO_WpsLaunch_F","Box_East_AmmoVeh_F","Box_IND_WpsSpecial_F","Land_Box_AmmoOld_F",
 	"O_supplyCrate_F","I_supplyCrate_F","B_CargoNet_01_ammo_F","O_CargoNet_01_ammo_F","I_CargoNet_01_ammo_F",
 	"Land_MetalCase_01_large_F","Land_MetalCase_01_small_F","Box_East_Grenades_F","Box_IND_Grenades_F",
-	"Box_East_Ammo_F","Box_IND_Ammo_F","Box_East_AmmoOrd_F","Box_IND_AmmoOrd_F","Box_East_WpsLaunch_F"], 80];
+	"Box_East_Ammo_F","Box_IND_Ammo_F","Box_East_AmmoOrd_F","Box_IND_AmmoOrd_F","Box_East_WpsLaunch_F"
+										 ], 150];
+_localVehicles = [];
 {
-	if (alive _x) then
+	if (local _x) then
 	{
-		_localVehicles pushBack _x;
+		if (alive _x) then
+		{
+			_localVehicles pushBack _x;
+		};
 	};
 }
-forEach _nearCrates;
+forEach _nearVehicles;
 	
 if (_localVehicles isEqualTo []) exitWith
 {
