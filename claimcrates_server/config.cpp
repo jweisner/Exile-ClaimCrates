@@ -40,7 +40,6 @@ class CfgNetworkMessages
 		module="ClaimCrates";
 		parameters[]=
 		{
-			"STRING",
 			"STRING"
 		};
 	};
