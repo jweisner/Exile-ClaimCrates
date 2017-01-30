@@ -72,7 +72,7 @@ Example interaction code for an ```Exile_Container_SupplyBox```:
 
 ## Tested with these Exile mods
 * Linux ArmA server
-* customized Exile
+* Exile client/server 1.0.2
 * DMS
 * Occupation
 * InfiSTAR
