@@ -36,22 +36,7 @@ if !((backpack player) isEqualTo "") then
 	_inventoryDropdown lbSetPicture [_index, "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\backpack_ca.paa"];
 	_inventoryDropdown lbSetValue [_index, 4];
 };
-_nearVehicles = nearestObjects [player, ["LandVehicle", "Air", "Ship"], 80];
-{
-	if (local _x) then
-	{
-		if (alive _x) then
-		{
-			_index = _inventoryDropdown lbAdd getText(configFile >> "CfgVehicles" >> (typeOf _x) >> "displayName");
-			_inventoryDropdown lbSetData [_index, netId _x];
-			_inventoryDropdown lbSetValue [_index, 5];
-		};
-	};
-}
-forEach _nearVehicles;
-
-// add nearby storage crates
-_nearCrates = nearestObjects [player, [
+_nearVehicles = nearestObjects [player, ["LandVehicle", "Air", "Ship",
 	"Box_NATO_WpsSpecial_F","Box_NATO_Ammo_F","Box_NATO_Uniforms_F","Box_East_Wps_F",
 	"Exile_Container_Storagecrate","Exile_Container_SupplyBox","Box_IND_Support_F","Box_East_Support_F",
 	"Land_CargoBox_V1_F","Box_IND_Wps_F","Box_FIA_Ammo_F","CargoNet_01_box_F","Box_Syndicate_Wps_F",
@@ -65,7 +50,6 @@ _nearCrates = nearestObjects [player, [
 	"O_supplyCrate_F","I_supplyCrate_F","B_CargoNet_01_ammo_F","O_CargoNet_01_ammo_F","I_CargoNet_01_ammo_F",
 	"Land_MetalCase_01_large_F","Land_MetalCase_01_small_F","Box_East_Grenades_F","Box_IND_Grenades_F",
 	"Box_East_Ammo_F","Box_IND_Ammo_F","Box_East_AmmoOrd_F","Box_IND_AmmoOrd_F","Box_East_WpsLaunch_F"], 80];
-
 {
 	if (local _x) then
 	{
@@ -77,6 +61,6 @@ _nearCrates = nearestObjects [player, [
 		};
 	};
 }
-forEach _nearCrates;
+forEach _nearVehicles;
 
 true
