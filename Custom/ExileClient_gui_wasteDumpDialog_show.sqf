@@ -54,7 +54,7 @@ lbClear _dropdown;
 {
 	_vehicleObject = _x;
 	_vehicleName = getText(configFile >> "CfgVehicles" >> (typeOf _vehicleObject) >> "displayName");
-	if (_crate isKindOf "AIR" || _crate isKindOf "CAR" || _crate isKindOf "TANK") then
+	if (_vehicleObject isKindOf "AIR" || _vehicleObject isKindOf "CAR" || _vehicleObject isKindOf "TANK") then
     {
 		_index = _dropdown lbAdd (format ["Cargo: %1", _vehicleName]);
 		_dropdown lbSetData [_index, netId _vehicleObject];
@@ -68,7 +68,7 @@ lbClear _dropdown;
 		_index = _dropdown lbAdd (format ["Crate contents: %1", _vehicleName]);
 		_dropdown lbSetData [_index, netId _vehicleObject];
 		_dropdown lbSetValue [_index, 2];
-	} 
+	}; 
 }
 forEach _localVehicles;
 true call ExileClient_gui_postProcessing_toggleDialogBackgroundBlur;
