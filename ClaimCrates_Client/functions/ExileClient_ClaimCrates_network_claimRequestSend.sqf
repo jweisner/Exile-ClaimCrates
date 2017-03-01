@@ -21,11 +21,11 @@ try
     {
         throw "That's not a crate... derp!";
     };
-    // TODO:
-    // if (player is in safe zone) then
-    // {
-    //     throw "You can't claim crates inside a safe zone."
-    // };
+
+    if (ExilePlayerInSafezone) then
+    {
+        throw "You can't claim crates inside a safe zone. This is to prevent shenanigans."
+    };
 
     ["claimCrateRequest",[_objectNetId]] call ExileClient_system_network_send;
 }
