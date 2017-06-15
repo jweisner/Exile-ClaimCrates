@@ -1,11 +1,14 @@
 # Exile-ClaimCrates
 
-[![Arma 1.66](https://img.shields.io/badge/Arma-1.66-blue.svg)](https://dev.arma3.com/post/sitrep-00182) [![Exile 1.0.2 Kohlrabi](https://img.shields.io/badge/Exile-1.0.2%20Kohlrabi-C72651.svg)](http://www.exilemod.com/topic/17807-102-kohlrabi/)
+[![Arma 1.70](https://img.shields.io/badge/Arma-1.70-blue.svg)](https://dev.arma3.com/post/spotrep-00067) [![Exile 1.0.3 Lemon](https://img.shields.io/badge/Exile-1.0.3%20Lemon-C72651.svg)](http://www.exilemod.com/announcement/126-exile-103-lemon-has-dropped/)
 
 This Exile server mod allows players to bulk-sell loot crates from DMS/Occupation missions.
 
 The code is adapted from [Exile-ClaimVehicles](https://github.com/MezoPlays/Claim-Vehicles) by MezzoPlays/gianni001
 The method used combines the idea of [TheSmoothOperator's R3F-WasteDumpOverride](https://github.com/TheSmoothOperator/R3F-WasteDumpOverride) with [this post](http://www.exilemod.com/topic/17848-release-r3f-waste-dump-override/?do=findComment&comment=147705) and makes it work. I don't use R3F on my server, so I needed another method. None of this code is "mine", I just mashed it together.
+
+## NOTICE
+This code is no longer maintained because I no longer have an active Arma server. It works as of the Arma/Exile/etc. components listed below. Feel free to fork this code and/or submit a pull request.
 
 ## Installation
 * Make ```claimcrates_server.pbo``` using PBO Manager on the ```claimcrates_server``` folder
@@ -72,7 +75,7 @@ Example interaction code for an ```Exile_Container_SupplyBox```:
 
 ## Tested with these Exile mods
 * Linux ArmA server
-* Exile client/server 1.0.2
+* Exile client/server 1.0.3
 * DMS
 * Occupation
 * InfiSTAR
@@ -84,8 +87,6 @@ Example interaction code for an ```Exile_Container_SupplyBox```:
 * Extended Base Mod
 * Enigma's Revive
 * Claim Vehicles
-
-Check it out on the ```[TLZ] Altis``` public Exile server!
 
 ## Tools
 * [PBO Manager](http://www.armaholic.com/page.php?id=16369)
